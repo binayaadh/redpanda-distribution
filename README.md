@@ -64,7 +64,7 @@ Below is the detailed process:
 
 ## **Link to Map and Resources**:
 
--   **[Link to the interactive map]** (to be added after publishing)
+-   **[[Link to the interactive map](https://binayaadh.github.io/redpanda-distribution/)]** 
 -   The full dataset and files used in this project can be accessed through the sources mentioned above, or included as part of the project repository on **GitHub**.
 
 ## **Map Features**:
