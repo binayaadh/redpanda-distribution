@@ -4,7 +4,10 @@
 
 # **Global Distribution of Red Panda and its Occurrence in the Himalayas of Nepal**
 
-![Figure1: Red Panda](./red_panda.png)
+**[[Link to the interactive map](https://binayaadh.github.io/redpanda-distribution/)]** 
+
+!<img src="images/red_panda.png" alt="Figure 1: Red Panda" width="400"/>
+
 
 ## **Data Sources**:
 
@@ -26,7 +29,7 @@ The goal of this project was to create an interactive web-based map that highlig
 
 This project began by gathering relevant data from multiple sources, followed by processing in **QGIS** to prepare it for visualization in **Mapbox**.
 
-![Figure 2: Static map prepared in QGIS for preliminary visualization](./red_panda_distribution.png)
+![Figure 2: Static map prepared in QGIS for preliminary visualization](images/red_panda_distribution.png)
 
 Below is the detailed process:
 
