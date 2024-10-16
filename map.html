@@ -10,59 +10,60 @@
     body { margin:0; padding:0; }
     #map { position:absolute; top:0; bottom:0; width:100%; }
 
-    /* Style for the legend */
+    
     .legend {
       background-color: white;
       border-radius: 5px;
       bottom: 30px;
       left: 10px;
-      padding: 15px; /* Increased padding */
+      padding: 15px; 
       font-family: Arial, sans-serif;
+      font-size: 12px;
       position: absolute;
       z-index: 1;
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     }
     .legend h4 {
-      margin: 0 0 15px; /* Increased space below the title */
-      font-size: 18px; /* Increased font size */
+      margin: 0 0 15px; 
+      font-size: 18px; 
     }
     .legend div {
       display: flex;
       align-items: center;
-      margin-bottom: 10px; /* Increased spacing between legend items */
+      margin-bottom: 10px; 
     }
     .legend div span {
-      width: 30px; /* Increased size */
-      height: 30px; /* Increased size */
+      width: 20px; 
+      height: 20px; 
       display: inline-block;
-      margin-right: 12px; /* Increased space between box and text */
+      margin-right: 10px; 
     }
 
-    /* Outline for protected areas */
+    
     .outline {
-      width: 30px; /* Increased size */
-      height: 30px; /* Increased size */
-      border: 3px solid #eb63eb; /* Outline color, increased border size */
-      background-color: transparent; /* No fill */
+      width: 30px; 
+      height: 30px; 
+      border: 3px solid #eb63eb; 
+      background-color: transparent; 
     }
 
-    /* Gradient for heatmap (Red to Blue) */
+   
     .heatmap {
-      width: 80px; /* Made wider for better gradient display */
-      height: 30px; /* Increased size */
+      width: 80px; 
+      height: 30px; 
       background: linear-gradient(to right, #c52b14, #cbdd58, #00FFFF); /* Red to Blue gradient */
     }
 
-    /* Gradient for LULC */
+    
     .lulc-gradient {
-      width: 150px; /* Wider for LULC gradient */
-      height: 30px; /* Same height as other items */
+      width: 150px; 
+      height: 30px; 
       background: linear-gradient(to right, #006400, #7CFC00, #FFD700, #FFFFFF); /* LULC gradient: Forest (dark green) -> Shrubs (light green) -> Crops (yellow) -> Snow (white) */
     }
 
-    /* Style for Red Panda icon */
+    
     .red-panda-icon {
-      width: 30px; /* Size of the icon */
+      width: 30px; 
       height: 30px;
     }
 
@@ -72,7 +73,7 @@
 
 <div id='map'></div>
 
-<!-- Legend element -->
+
 <div class="legend">
   <h4>Legend</h4>
   <div><span class="heatmap"></span>Red Panda Distribution in Nepal (Heatmap)</div>

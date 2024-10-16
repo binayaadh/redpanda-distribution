@@ -4,7 +4,7 @@
     <meta charset=utf-8 />
     <title>Global Distribution Range of the Red Panda and Its Occurrence in Nepal- University of Kentucky- New Maps Plus Project</title>
     <h1>Global Distribution Range of the Red Panda and Its Occurrence in Nepal</h1>
-    <h2>A project by Binaya Adhikari, <a href="https://github.com/binayaadh" target="_blank">Click here to view my GitHub Profile- binayaadh</a>,         <a href="https://bio.as.uky.edu/users/bad251" target="_blank">Click here to View my profile on university website</a>
+    <h2>A project by Binaya Adhikari, <a href="https://github.com/binayaadh" target="_blank">Click here to view my GitHub Profile- binayaadh</a>,         <a href="https://bio.as.uky.edu/users/bad251" target="_blank">  Click here to view my university profile</a>
 
     </h2>
     <h3>New Maps Plus, University of Kentucky</h3>
@@ -33,26 +33,24 @@
         h1 {
             font-family: 'Lato', sans-serif;
             font-weight: 900i;
-            font-size: 2.8em;
+            font-size: 2em;
             font-style: italic;
-            /* The em unit. 3x the current size */
             letter-spacing: .01em;
             margin: 0 0 15px 0;
-            /* text-transform: uppercase; */
         }
 
         h2 {
             font-family: 'Lato', sans-serif;
             font-weight: 300;
             color: #63666a;
-            font-size: 1.5em;
+            font-size: 1em;
             letter-spacing: .06em;
             font-style: italic;
             margin: 0 0 25px 0;
         }
 
         p {
-            font-size: 1.15em;
+            font-size: 1em;
             line-height: 1.8em;
             margin: 0 0 25px 0;
         }
@@ -68,7 +66,6 @@
 
         ul {
             padding: 0px 20px 4px 20px;
-            /* font-size: 0.96em; */
             line-height: 1.6em;
             color: #63666a;
         }
@@ -87,7 +84,25 @@
             width: 100%;
         }
 
-        /* add custom style class here */
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px; 
+        }
+
+        .text-column {
+            width: 40%; 
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+
+        
+        .figure-column {
+            width: 40%; 
+            box-sizing: border-box;
+        }
 
         .linkbox {
             margin: 3px 0 20px 0;
@@ -101,25 +116,17 @@
             padding-top: 20px;
         }
 
-        /* Use float property to make two-column layout */
+        @media screen and (max-width: 800px) {
+            .content {
+                flex-direction: column; 
+            }
+        
 
-        .first-column {
-            float: left;
-            width: 48%;
-            padding-right: 20px;
-        }
-
-        .column {
-            float: left;
-            width: 48%;
-        }
-
-        /* Clear floats after the columns */
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
+            .text-column,
+            .figure-column {
+                width: 100%; 
+                padding: 0;
+            }
         }
 
         .svg-title {
@@ -127,16 +134,6 @@
             display: inline-block;
             width: 75px;
             margin: -8px 10px -8px 0;
-        }
-
-        /* When browser is 800px wide or less */
-
-        @media screen and (max-width: 800px) {
-
-            .first-column,
-            .column {
-                width: 100%;
-            }
         }
     </style>
 </head>
@@ -158,11 +155,13 @@
         
         <p>The red panda <i>(Ailurus fulgens)</i>, also known as the "lesser panda" or "firefox," is a small mammal native to the eastern Himalayas and southwestern China. It is classified as endangered due to habitat loss, fragmentation, and poaching. Red pandas are solitary and arboreal, spending most of their time in trees. They are primarily herbivorous, feeding mainly on bamboo, but they also eat fruits, berries, acorns, and insects. Nepal plays a crucial role in their conservation, as its protected areas provide a vital habitat for the species. The global population of red pandas is estimated to be fewer than 10,000 individuals, highlighting the need for ongoing conservation efforts to protect this unique and elusive species.</p>        
         
+        <img class="max-image-width" src="images/red_panda.png" title="Red Panda distribution" style="width: 250px; height: auto;">
+<div class="linkbox">Red panda representation image generated using AI</div>
         <p>
             <a href="https://animaldiversity.org/accounts/Ailurus_fulgens/#:~:text=Physical%20Description,large%2C%20erect%2C%20and%20pointed." target="_blank">Click here</a> to know more about the red panda.
         </p>
 
-        <p><strong>Data Sources:</strong></p>
+        <p><strong>Data Sources For This Project:</strong></p>
 
         
         <ul>
@@ -183,9 +182,9 @@
             <div class="first-column">
                 <h3>Steps Involved:</h3>
                 <ul>
-                    <li>Data Collection: Occurrence points from GBIF and personal data were filtered for Nepal in QGIS.</li>
+                    <li>Data Collection: Occurrence points from GBIF and field based observational data for Nepal was filtered using QGIS.</li>
                     <li>Protected Areas: The shapefile from WDPA was clipped for Nepal and merged using the Union tool in QGIS.</li>
-                    <li>Global Distribution Range: The IUCN distribution shapefile was clipped to Nepal and exported for visualization.</li>
+                    <li>Global Distribution Range: The IUCN distribution shapefile was clipped and exported for visualization.</li>
                     <li>Mapbox Integration: GeoJSON files were uploaded to Mapbox and styled using layers such as heatmaps, custom symbols, and terrain layers.</li>
                 </ul>
             </div>
@@ -203,32 +202,31 @@
 
         <h3>Map Features:</h3>
         <ul>
-            <li><strong>Location:</strong> Focused on the Himalayas of Nepal.</li>
+            <li><strong>Location:</strong> Global distribution, and occurrence of Red Panda focused on Nepal.</li>
             <li><strong>Global Range:</strong> Displayed using polygons.</li>
             <li><strong>Red Panda Occurrence:</strong> Displayed using both a heatmap and a custom symbol (red panda icon).</li>
             <li><strong>Protected Areas:</strong> Highlighted with styled boundaries and labels.</li>
             <li><strong>Terrain:</strong> Enhanced with DEM and land-use layers to reflect elevation and land cover.</li>
         </ul>
 
-        <h3>Conclusion:</h3>
-        <p>This interactive map successfully visualizes the global distribution and Nepal-specific occurrence of red pandas. By combining multiple datasets and advanced mapping techniques, it serves as a valuable resource for both research and conservation efforts.</p>
+        <p>This interactive map visualizes the global distribution and Nepal-specific occurrence of red pandas. By combining multiple datasets and advanced mapping techniques, it serves as a valuable resource for both research and conservation efforts.</p>
 
     </div>
-    <div class="column">
-        <img class="max-image-width" src="images/red_panda.png"
-            title="Red Panda distribution">
-        <div class="linkbox">Red panda representation image 
-        </div>
+    <div class="figure-column">
 
+        <img class="max-image-width" src="images/red_panda_distribution.png" title="Red Panda distribution">
+        <div class="linkbox">Static map prepared in QGIS</div>
     </div>
 </div>
-<div class="column">
-    <img class="max-image-width" src="images/red_panda_distribution.png"
-        title="Red Panda distribution">
-    <div class="linkbox">Static map prepared in QGIS
-    </div>
+</section>
 
-</div>
-</div>
-</div>
+<hr>
+<!-- <h4><a href="https://uky-gis.github.io">UKy GIS and Mapping</a></h4> -->
+<a href="https://uky-gis.github.io">
+    <img src="images/logo-color-400px.png" alt="Uinversity of Kentucky Geography"></a>
+</section>
+</body>
+</html>
+</body>
+</html>
 
